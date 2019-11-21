@@ -1,0 +1,24 @@
+﻿@model IEnumerable<WordsViewModel>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+    <div class="text-center">
+        <h1 class="display-4">Moby Dick</h1>
+        <br /><br />
+
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+                <th>Words |  </th>
+                <th>Count</th>
+            </tr>
+            @foreach (WordsViewModel vm in Model)
+            {
+                <tr>
+                    <td>@vm.Text</td>
+                    <td>@vm.Count</td>
+                </tr>
+            }
+        </table>
+    </div>
